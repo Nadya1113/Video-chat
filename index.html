@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
+  <title>Video chat</title>
+</head>
+<body>
+  <aside>
+    <!-- left bar -->
+    <div class="logo">
+      <img src="PNG/vc.png" alt="logo" width="80">
+    </div>
+    <hr>
+    <p>ROOM USERS</p>
+    <div class="users_name" id="users_name"></div>
+  </aside>
+  
+  <div class="right-block">
+    <nav>
+      <div class="name_room">
+        ID room: #123456
+      </div>
+      <div class="icon">
+        <img src="PNG/share.png" alt="share">
+        <img src="PNG/info.png" alt="information">
+        <img src="PNG/settings.png" alt="settings">
+      </div>
+    </nav>
+    <section>
+
+      <article class="video_block">
+        <div class="relative_block settings_video">
+          <img src="PNG/microphone_on.png" alt="microphone on">
+          <img src="PNG/camera.png" alt="camera on">
+          <img src="PNG/demonstration.png" alt="demonstration window">
+        </div>
+        <div class="translation">
+          <!-- Здесь будет блок с трансляцией -->
+          Сервис скоро будет работать, просим вашего терпения и понимания!
+        </div>
+      </article>
+
+      <article class="chat_block">
+        <div class="closeChat"><div class="close" onclick="closeWindow('chat')"></div></div>
+        <div class="header_chat">
+          <h2>Chat</h2>
+        </div>
+        <div class="chat">
+
+          <div class="scroll-panel" id="scroll-panel">
+            <p class="start_text_chat">Чат готов к работе</p>
+          </div>
+
+          <div class="message">
+            <textarea type="text" name="message" id="message"></textarea>
+            <button onclick="sendMessage()">Send</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="chat_block-mobile-button">
+        <button onclick="openChat()">open chat</button>
+      </article>
+    </section>
+  </div>
+
+  <script src="JS/loginUser.js"></script>
+  <script src="JS/chat.js"></script>
+  <script src="JS/translation.js"></script>
+
+  <script src="JS/adaptive_mobile.js"></script>
+</body>
+</html>
